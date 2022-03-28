@@ -20,14 +20,28 @@ function forEach(array, functionToApply) {
   }
   console.log(find());
 
-function filter (){
+function filter(){
     const names = [{
-    firstName: 'Kimberly',
-    lastName: 'Doe',
+      firstName: "Kimberly",
+      lastName: "Doe",
 },{
-    firstName: 'Elaine',
-    lastName: 'Smith',
+      firstName: "Elaine",
+      lastName: "Smith",
 }]
-    return names.lastname.filter(person => person.lastname < 4)
+      return names.filter(person => person.lastName.length === 3)  
 }
-console.log(filter());
+console.log(filter())
+
+function reduce() {
+  const names = [{
+    firstName: "Kimberly",
+    lastName: "Doe",
+},{
+    firstName: "Elaine",
+    lastName: "Smith",
+}]
+
+  return names.reduce(person => person.lastName)
+
+}
+console.log(reduce())
